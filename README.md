@@ -14,7 +14,7 @@
 ## Getting Started
 
 **To clone this project**
-**Run command: $git clone git@github.com:M0rrighan/Portfolio_from_Figma.git**
+**Run command: $git clone git@github.com:M0rrighan/Portfolio_template1.git**
 **or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 
 ### Prerequisites
