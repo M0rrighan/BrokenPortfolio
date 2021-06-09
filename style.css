@@ -48,7 +48,7 @@ header {
 .logo_placeholder {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   height: 100%;
   margin: 4px;
 }
@@ -115,7 +115,7 @@ main {
 }
 
 .headline hgroup h1,
-h2 {
+.headline hgroup h2 {
   color: var(--neutral_b);
   order: 0;
   font-size: 40px;
