@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* reset page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global */
+:root {
+  --primary_n: rgba(127, 140, 255, 1);
+  --primary_b: rgba(96, 112, 255, 1);
+  --neutral_n: rgba(52, 69, 99, 1);
+  --neutral_b: rgba(23, 43, 77, 1);
+}
+
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* ul li {
+  list-style-type: none;
+}
+
+body {
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  color: var(--neutral_n);
+  background-color: #e5e5e5;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* header  */
+header {
+  width: 100%;
+  height: 48px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.logo_placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  margin: 4px;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 10px 12px;
+  color: var(--primary_b);
+}
+
+nav {
+  margin-right: 24px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.material-icons.colored {
+  color: var(--primary_b);
+}
+
+/* main / headline section */
+main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 48px;
+  background-color: #fff;
+  border-bottom-left-radius: 85px;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  height: 97%;
+  margin: auto 24px;
+}
+
+.headline > * {
+  order: 999;
+}
+
+.shapes_bg {
+  background-image: url("./back-img/header-shapes-mobile@2x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.headline hgroup {
+  order: 0;
+}
+
+.headline hgroup h1,
+.headline hgroup h2 {
+  color: var(--neutral_b);
+  order: 0;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+.headline p {
+  order: 1;
+}
+
+.headline .connect_btn {
+  order: 2;
+  color: var(--primary_n);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.headline .connect_btn:hover {
+  color: var(--primary_b);
+}
+
+.headline .connect_btn:active {
+  color: rgb(106, 112, 168);
+}
+
+.social {
+  order: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
