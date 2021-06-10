@@ -20,6 +20,10 @@
   color: inherit;
 }
 
+* ul li {
+  list-style-type: none;
+}
+
 body {
   width: 100vw;
   font-family: "Poppins", sans-serif;
@@ -127,13 +131,24 @@ main {
   order: 1;
 }
 
-.headline h3 {
+.headline .connect_btn {
+  order: 2;
   color: var(--primary_n);
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   text-transform: uppercase;
-  order: 2;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.headline .connect_btn:hover {
+  color: var(--primary_b);
+}
+
+.headline .connect_btn:active {
+  color: rgb(106, 112, 168);
 }
 
 .social {
