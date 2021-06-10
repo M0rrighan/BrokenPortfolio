@@ -221,7 +221,7 @@ main {
   order: 1;
 }
 
-.headline .connect_btn {
+.headline .connect {
   order: 2;
 }
 
@@ -308,6 +308,7 @@ main {
 }
 
 .action {
+  order: 4;
   display: flex;
   justify-content: flex-start;
   align-items: center;
