@@ -465,8 +465,8 @@ textarea::placeholder {
 }
 
 .contact-me_section .contact-form .submit-button:active {
-color: #fff;
-background-color: #2230d2;
+  color: #fff;
+  background-color: #2230d2;
 }
 
 .contact-me_section .contact-form .submit-button:hover {
