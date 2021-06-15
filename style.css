@@ -424,3 +424,38 @@ main {
   color: #ebebff;
   text-align: center;
 }
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form ul li {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #fff;
+  color: #172b4d;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: normal;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin: 9px auto;
+  padding: 15px 16px;
+}
+
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+}
