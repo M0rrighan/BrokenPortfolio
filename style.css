@@ -34,7 +34,7 @@ body {
   line-height: 24px;
 }
 
-/* Colors */
+/* Typography and Colors */
 .neutral_n {
   color: var(--neutral_n);
 }
@@ -63,29 +63,10 @@ body {
   background-color: #fff;
 }
 
-.contact_txt {
-  color: #ebebff;
-}
-
-.skills_title {
-  color: #000;
-}
-
-.skill_item {
-  color: #253858;
-  background: #f7f7f9;
-}
-
-.contact_title {
+.white {
   color: #fff;
 }
 
-.contact_form input,
-.contact_form textarea {
-  color: #172b4d;
-}
-
-/* Typography */
 .logo {
   font-size: 18px;
   line-height: 20px;
@@ -108,6 +89,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
+  color: #000;
 }
 
 .skill_name {
@@ -129,14 +111,16 @@ body {
 }
 
 .contact_txt {
+  color: #ebebff;
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
   text-align: center;
 }
 
-.contact_form input,
-.contact_form textarea {
+form input,
+form textarea {
+  color: #172b4d;
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
@@ -232,15 +216,13 @@ form ul li .action_btn {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
-  /* background-size: 100vw 100%; */
 }
 
 .contact-me_sect_bg {
-  background-image: url("./back-img/contact_form_shapes-mobile@2x.svg"),
-    url("./back-img/shape.png");
+  background-image: url("./back-img/contact_form_shapes-mobile@2x.svg");
   background-color: var(--primary_b);
-  background-repeat: no-repeat, no-repeat;
-  background-position: right 0 top 21px, bottom 4px center;
+  background-repeat: no-repeat;
+  background-position: right 0 top 21px;
   background-size: auto;
 }
 
@@ -275,7 +257,7 @@ header {
   margin: 4px;
 }
 
-.logo {
+.logo.xs-transparent_btn {
   padding: 10px 12px;
 }
 
@@ -361,8 +343,8 @@ main {
   gap: 12px;
 }
 
-.project_title {
-  padding-right: 1px;
+.card_details .project_title {
+  padding-right: 2px;
 }
 
 .project_details {
@@ -440,6 +422,8 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #253858;
+  background: #f7f7f9;
   border-radius: 8px;
 }
 
@@ -673,7 +657,7 @@ form {
     align-self: center;
   }
 
-  .submit_btn .action_btn {
+  form ul li .action_btn {
     margin: 0;
   }
 }
