@@ -496,7 +496,7 @@ form {
     justify-content: flex-end;
   }
 
-  .btn {
+  nav .btn {
     letter-spacing: 0;
     border-radius: 0;
     font-size: 15px;
@@ -536,6 +536,10 @@ form {
 @media only screen and (min-width: 992px) {
   .works_section {
     padding: 142px 0;
+  }
+
+  .works_section article:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .work_card {
@@ -585,6 +589,46 @@ form {
     align-items: flex-start;
     gap: 22px;
     padding: 24px;
+  }
+}
+
+/* Media queries for About Section */
+@media only screen and (min-width: 992px) {
+  .about_section {
+    width: 80.277778%;
+    grid-template-columns: 38.66782% 59.16955%;
+    gap: 25px;
+    margin: 0 auto;
+  }
+
+  .skills {
+    padding: 12px;
+  }
+
+  .skill_frame {
+    padding: 0 24px;
+  }
+
+  .skill_content {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .skill_item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .skill_item_icon {
+    margin: 0;
+  }
+
+  .top .main_title {
+    font-weight: 700;
   }
 }
 
