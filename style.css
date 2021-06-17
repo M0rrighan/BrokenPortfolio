@@ -483,21 +483,70 @@ form {
   background-repeat: no-repeat;
 }
 
-/* Center .content_wrapper after reaching max-size  */
-/* min-width: 496px = max-size: 447px + margin: 2*24px */
+/* Center .content_wrapper after reaching max-size  
+min-width: 496px = max-size: 447px + margin: 2*24px */
 @media only screen and (min-width: 496px) {
+  /* Contact-me section */
   .contact-me_section .content_wrapper {
     margin: auto auto;
   }
 }
 
 @media only screen and (min-width: 540px) {
+  /* Contact-me section */
   .submit_btn {
     align-self: center;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  /* Work section */
+  .works_section {
+    padding: 142px 0;
+  }
+
+  .work_card {
+    width: 80.277777777778%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .work_card img {
+    height: auto;
+    width: 50%;
+    align-self: center;
+  }
+
+  .card_details {
+    width: 50%;
+    max-width: none;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .project_title {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .project_info_txt {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .upper {
+    font-weight: 500;
+  }
+
+  .descriptive_txt {
+    font-size: 16px;
+  }
+
+  /* Contact-me section */
   .contact_txt {
     padding-bottom: 14px;
   }
@@ -511,8 +560,16 @@ form {
   }
 }
 
-/* width > min-width only when vw > 1440px */
-/* (569 = 40% of 1440 | 447 = 31% of 1440) */
+@media only screen and (min-width: 1280px) {
+  .work_card {
+    align-items: flex-start;
+    gap: 22px;
+    padding: 24px;
+  }
+}
+
+/* width > min-width only when vw > 1440px
+(569 = 40% of 1440 | 447 = 31% of 1440) */
 @media only screen and (min-width: 992px) {
   .contact-me_section .content_wrapper {
     width: 40vw;
