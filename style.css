@@ -482,3 +482,46 @@ form {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Center .content_wrapper after reaching max-size  */
+/* min-width: 496px = max-size: 447px + margin: 2*24px */
+@media only screen and (min-width: 496px) {
+  .contact-me_section .content_wrapper {
+    margin: auto auto;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .submit_btn {
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contact_txt {
+    padding-bottom: 14px;
+  }
+
+  .contact_form {
+    gap: 27px;
+  }
+
+  .contact_form li {
+    margin: 0;
+  }
+}
+
+/* width > min-width only when vw > 1440px */
+/* (569 = 40% of 1440 | 447 = 31% of 1440) */
+@media only screen and (min-width: 992px) {
+  .contact-me_section .content_wrapper {
+    width: 40vw;
+    min-width: 569px;
+    max-width: none;
+  }
+
+  form {
+    width: 31vw;
+    min-width: 447px;
+  }
+}
