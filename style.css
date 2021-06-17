@@ -235,10 +235,11 @@ form ul li .action_btn {
 }
 
 .contact-me_sect_bg {
-  background-image: url("./back-img/contact_form_shapes-mobile@2x.svg");
+  background-image: url("./back-img/contact_form_shapes-mobile@2x.svg"),
+    url("./back-img/shape.png");
   background-color: var(--primary_b);
-  background-repeat: no-repeat;
-  background-position: right 0 top 21px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 0 top 21px, bottom 4px center;
   background-size: auto;
 }
 
@@ -282,7 +283,7 @@ main {
   position: relative;
   top: 48px;
   width: 100vw;
-  height: 674px;
+  height: calc(100vh - 54px);
   border-bottom-left-radius: 85px;
 }
 
@@ -436,6 +437,8 @@ main {
 
 /* Contact section layout */
 .contact-me_section {
+  height: calc(100vh - 58px);
+  min-height: 779px;
   border-top-left-radius: 85px;
 }
 
@@ -476,31 +479,33 @@ form {
   padding: 15px 16px;
 }
 
-.bottom-separator {
-  width: 100%;
-  background-image: url("./back-img/shape.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* ------ Media queries ------ */
 
-/* Center .content_wrapper after reaching max-size  
-min-width: 496px = max-size: 447px + margin: 2*24px */
-@media only screen and (min-width: 496px) {
-  /* Contact-me section */
-  .contact-me_section .content_wrapper {
+/* Media queries for Headline Section */
+@media only screen and (min-width: 992px) {
+  .headline {
+    width: 64vw;
+    max-width: 920px;
+    padding: 0;
     margin: auto auto;
   }
-}
 
-@media only screen and (min-width: 540px) {
-  /* Contact-me section */
-  .submit_btn {
-    align-self: center;
+  .headline .main_title {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+  }
+
+  .headline .main-desc {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
   }
 }
 
+/* Media queries for Work Section */
+
 @media only screen and (min-width: 992px) {
-  /* Work section */
   .works_section {
     padding: 142px 0;
   }
@@ -545,8 +550,41 @@ min-width: 496px = max-size: 447px + margin: 2*24px */
   .descriptive_txt {
     font-size: 16px;
   }
+}
 
-  /* Contact-me section */
+@media only screen and (min-width: 1280px) {
+  .work_card {
+    align-items: flex-start;
+    gap: 22px;
+    padding: 24px;
+  }
+}
+
+/* Media queries for Contact-me Section */
+
+/* Center .content_wrapper after reaching max-size  
+min-width: 496px = max-size: 447px + margin: 2*24px */
+@media only screen and (min-width: 496px) {
+  .contact-me_section .content_wrapper {
+    margin: auto auto;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .submit_btn {
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contact-me_section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .contact_title {
+    margin-top: 0;
+  }
   .contact_txt {
     padding-bottom: 14px;
   }
@@ -557,14 +595,6 @@ min-width: 496px = max-size: 447px + margin: 2*24px */
 
   .contact_form li {
     margin: 0;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .work_card {
-    align-items: flex-start;
-    gap: 22px;
-    padding: 24px;
   }
 }
 
