@@ -230,8 +230,9 @@ form ul li .action_btn {
 .shapes_bg {
   background-image: url("./back-img/header-shapes-mobile@2x.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
+  background-position: left top;
+  background-size: cover;
+  /* background-size: 100vw 100%; */
 }
 
 .contact-me_sect_bg {
@@ -330,11 +331,19 @@ main {
   padding: 16px;
 }
 
-.work_card img {
+.work_card .img {
+  background-color: #ebebff;
   height: 220px;
   width: auto;
   border-radius: 8px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
 }
 
 .card_details {
@@ -442,7 +451,7 @@ main {
 /* Contact section layout */
 .contact-me_section {
   height: calc(100vh - 58px);
-  min-height: 779px;
+  min-height: 749px;
   border-top-left-radius: 85px;
 }
 
@@ -484,9 +493,22 @@ form {
 }
 
 /* ------ Media queries ------ */
+@media only screen and (min-width: 992px) {
+  /* Backgrounds */
+  .shapes_bg {
+    background-image: url("./back-img/desktop-main-bg@2x.svg");
+  }
 
-/* Media queries for Header */
-@media only screen and (min-width: 768px) {
+  .contact-me_sect_bg {
+    background-image: url("./back-img/contact_background_shapes@2x.svg");
+  }
+
+  /* Media queries for Header */
+  header {
+    height: 72px;
+    padding: 0 9.86%;
+  }
+
   .menu_btn {
     display: none;
   }
@@ -507,10 +529,12 @@ form {
   .xs-transparent_btn {
     padding: 10px 12px;
   }
-}
 
-/* Media queries for Headline Section */
-@media only screen and (min-width: 768px) {
+  /* Media queries for Headline Section */
+  main {
+    height: calc(100vh - 72px);
+  }
+
   .headline {
     width: 64vw;
     max-width: 920px;
@@ -529,11 +553,8 @@ form {
     line-height: 28px;
     font-weight: 400;
   }
-}
 
-/* Media queries for Work Section */
-
-@media only screen and (min-width: 992px) {
+  /* Media queries for Work Section */
   .works_section {
     padding: 142px 0;
   }
@@ -546,15 +567,14 @@ form {
     width: 80.277777777778%;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    gap: 6px;
-    padding: 12px;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 24px 22px;
   }
 
-  .work_card img {
-    height: auto;
+  .work_card .img {
     width: 50%;
-    align-self: center;
+    height: 100%;
   }
 
   .card_details {
@@ -582,18 +602,8 @@ form {
   .descriptive_txt {
     font-size: 16px;
   }
-}
 
-@media only screen and (min-width: 1280px) {
-  .work_card {
-    align-items: flex-start;
-    gap: 22px;
-    padding: 24px;
-  }
-}
-
-/* Media queries for About Section */
-@media only screen and (min-width: 992px) {
+  /* Media queries for About Section */
   .about_section {
     width: 80.277778%;
     grid-template-columns: 38.66782% 59.16955%;
@@ -630,33 +640,23 @@ form {
   .top .main_title {
     font-weight: 700;
   }
-}
 
-/* Media queries for Contact-me Section */
-
-/* Center .content_wrapper after reaching max-size  
-min-width: 496px = max-size: 447px + margin: 2*24px */
-@media only screen and (min-width: 496px) {
-  .contact-me_section .content_wrapper {
-    margin: auto auto;
-  }
-}
-
-@media only screen and (min-width: 540px) {
-  .submit_btn {
-    align-self: center;
-  }
-}
-
-@media only screen and (min-width: 992px) {
+  /* Media queries for Contact-me Section */
   .contact-me_section {
+    height: calc(100vh - 92px);
     display: flex;
     justify-content: center;
     align-content: center;
   }
+
+  .contact-me_section .content_wrapper {
+    margin: auto auto;
+  }
+
   .contact_title {
     margin-top: 0;
   }
+
   .contact_txt {
     padding-bottom: 14px;
   }
@@ -668,19 +668,12 @@ min-width: 496px = max-size: 447px + margin: 2*24px */
   .contact_form li {
     margin: 0;
   }
-}
 
-/* width > min-width only when vw > 1440px
-(569 = 40% of 1440 | 447 = 31% of 1440) */
-@media only screen and (min-width: 992px) {
-  .contact-me_section .content_wrapper {
-    width: 40vw;
-    min-width: 569px;
-    max-width: none;
+  .submit_btn {
+    align-self: center;
   }
 
-  form {
-    width: 31vw;
-    min-width: 447px;
+  .submit_btn .action_btn {
+    margin: 0;
   }
 }
