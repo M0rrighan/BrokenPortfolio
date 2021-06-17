@@ -18,8 +18,22 @@
       <div class="logo_placeholder">
         <a href="index.html" class="logo primary_b">My Logo</a>
       </div>
-      <nav class="btn xs-transparent_btn btn_flex">
-        <i class="material-icons primary_b">menu</i>
+      <nav>
+        <ul class="menu">
+          <li class="btn xs-transparent_btn btn_flex">
+            <a href="#Portfolio">Portfolio</a>
+          </li>
+          <li class="btn xs-transparent_btn btn_flex">
+            <a href="#About">About</a>
+          </li>
+          <li class="btn xs-transparent_btn btn_flex">
+            <a href="#Contact">Contact</a>
+          </li>
+        </ul>
+
+        <a href="#menu" class="btn xs-transparent_btn btn_flex menu_btn"
+          ><i class="material-icons primary_b">menu</i></a
+        >
       </nav>
     </header>
     <!-- end toolbar -->
@@ -60,7 +74,7 @@
       </section>
     </main>
 
-    <section class="works_section">
+    <section id="Portfolio" class="works_section">
       <article class="work_card bg_white">
         <img src="./img/snapshoot1.png" alt="preview project 1" />
 
@@ -219,7 +233,7 @@
     </section>
 
     <div class="about_base bg_white">
-      <section class="about_section">
+      <section id="About" class="about_section">
         <div class="top">
           <h1 class="main_title neutral_b">
             About <br />
@@ -322,7 +336,7 @@
         </ul>
       </section>
 
-      <section class="contact-me_section contact-me_sect_bg">
+      <section id="Contact" class="contact-me_section contact-me_sect_bg">
         <div class="content_wrapper">
           <h2 class="main_title fw_bold contact_title">Contact me</h2>
           <p class="contact_txt">

@@ -256,6 +256,10 @@ header {
   z-index: 1;
 }
 
+.menu {
+  display: none;
+}
+
 .btn_flex {
   display: flex;
   justify-content: center;
@@ -481,8 +485,32 @@ form {
 
 /* ------ Media queries ------ */
 
+/* Media queries for Header */
+@media only screen and (min-width: 768px) {
+  .menu_btn {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    letter-spacing: 0;
+    border-radius: 0;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--neutral_n);
+  }
+
+  .xs-transparent_btn {
+    padding: 10px 12px;
+  }
+}
+
 /* Media queries for Headline Section */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .headline {
     width: 64vw;
     max-width: 920px;
