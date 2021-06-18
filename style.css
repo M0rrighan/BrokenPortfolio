@@ -442,7 +442,8 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
-  min-height: fit-content;
+  height: calc(100vh - 58px);
+  max-height: 745px;
   border-top-left-radius: 85px;
 }
 
@@ -642,10 +643,6 @@ form {
   .contact-me_section {
     height: calc(100vh - 92px);
     align-content: center;
-    /* padding-top: 9.3486997636%;
-    padding-bottom: 5.6985815603%;
-    padding-left: 5.2319444444%;
-    padding-right: 5.1388888889%; */
   }
 
   .contact-me_section .content_wrapper {
