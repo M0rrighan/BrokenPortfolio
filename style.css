@@ -81,16 +81,20 @@ body {
   font-size: 40px;
   line-height: 52px;
   font-weight: 800;
-  animation: load_main_title 300ms ease-in;
-  animation-fill-mode: forwards;
-  transform: translateY(-40px);
-  opacity: 0;
 }
 
 .project_title {
   font-size: 32px;
   line-height: 44px;
   font-weight: 700;
+}
+
+.main_title,
+.project_title {
+  animation: load_main_title 300ms ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(-40px);
+  opacity: 0;
 }
 
 .skills_title {
@@ -110,6 +114,9 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+}
+
+.descriptive_txt.animate {
   animation: load-descriptive 300ms ease-in 300ms;
   animation-fill-mode: forwards;
   transform: translateX(-400px);
@@ -129,6 +136,13 @@ body {
   font-weight: 400;
   padding-bottom: 28px;
   text-align: center;
+}
+
+.contact_txt.animate {
+  animation: load_contact_txt 300ms ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(300px);
+  opacity: 0;
 }
 
 form input,
@@ -651,7 +665,6 @@ form {
 
   /* Media queries for Contact-me Section */
   .contact-me_section {
-    height: calc(100vh - 92px);
     align-content: center;
   }
 
@@ -688,6 +701,7 @@ form {
     transform: translateY(-40px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -699,8 +713,21 @@ form {
     transform: translateX(-400px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load_contact_txt {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
