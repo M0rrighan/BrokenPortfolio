@@ -89,6 +89,14 @@ body {
   font-weight: 700;
 }
 
+.main_title,
+.project_title {
+  animation: load_main_title 300ms ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
 .skills_title {
   font-size: 20px;
   line-height: 24px;
@@ -108,6 +116,13 @@ body {
   font-weight: 400;
 }
 
+.descriptive_txt.animate {
+  animation: load-descriptive 300ms ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateX(-400px);
+  opacity: 0;
+}
+
 .project_info_txt {
   font-size: 13px;
   line-height: 16px;
@@ -121,6 +136,13 @@ body {
   font-weight: 400;
   padding-bottom: 28px;
   text-align: center;
+}
+
+.contact_txt.animate {
+  animation: load_contact_txt 300ms ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(300px);
+  opacity: 0;
 }
 
 form input,
@@ -542,6 +564,10 @@ form {
     font-size: 48px;
     line-height: 60px;
     font-weight: 700;
+    animation: load_main_title 300ms ease-in;
+    animation-fill-mode: forwards;
+    transform: translateY(-40px);
+    opacity: 0;
   }
 
   .headline .main-desc {
@@ -639,7 +665,6 @@ form {
 
   /* Media queries for Contact-me Section */
   .contact-me_section {
-    height: calc(100vh - 92px);
     align-content: center;
   }
 
@@ -668,5 +693,41 @@ form {
 
   form ul li .action_btn {
     margin: 0;
+  }
+}
+
+@keyframes load_main_title {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load-descriptive {
+  0% {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load_contact_txt {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
