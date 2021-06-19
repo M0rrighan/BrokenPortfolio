@@ -81,6 +81,10 @@ body {
   font-size: 40px;
   line-height: 52px;
   font-weight: 800;
+  animation: load_main_title 300ms ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(-40px);
+  opacity: 0;
 }
 
 .project_title {
@@ -106,6 +110,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  animation: load-descriptive 300ms ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateX(-400px);
+  opacity: 0;
 }
 
 .project_info_txt {
@@ -542,6 +550,10 @@ form {
     font-size: 48px;
     line-height: 60px;
     font-weight: 700;
+    animation: load_main_title 300ms ease-in;
+    animation-fill-mode: forwards;
+    transform: translateY(-40px);
+    opacity: 0;
   }
 
   .headline .main-desc {
@@ -668,5 +680,27 @@ form {
 
   form ul li .action_btn {
     margin: 0;
+  }
+}
+
+@keyframes load_main_title {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load-descriptive {
+  0% {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
