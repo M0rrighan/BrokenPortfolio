@@ -234,7 +234,7 @@ form ul li .action_btn {
 header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 48px;
   display: flex;
   justify-content: space-between;
@@ -442,8 +442,6 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
-  height: calc(100vh - 58px);
-  max-height: 745px;
   border-top-left-radius: 85px;
 }
 
