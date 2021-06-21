@@ -176,6 +176,7 @@ textarea::placeholder {
   font-size: 17px;
   line-height: 24px;
   padding: 12px;
+  animation: disappearing_bg 300ms cubic-bezier(1, 0.25, 1, 0.41) 300ms;
 }
 
 form ul li .action_btn {
@@ -244,6 +245,7 @@ header {
 }
 
 .menu {
+  animation: flex_play 600ms ease-out;
   display: none;
 }
 
@@ -332,6 +334,18 @@ main {
 .img img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  animation: scale 600ms ease-in-out;
+}
+
+.img:hover img {
+  transform: scale(1.15, 1.15);
+  box-shadow:
+    0 15px 10px rgba(64, 83, 252, 0.6),
+    0 15px 10px rgba(235, 235, 255, 0.3),
+    inset 0 5px 3px rgba(64, 83, 252, 0.6),
+    inset 0 5px 3px rgba(235, 235, 255, 0.3);
+  transition: all 400ms ease-in-out;
 }
 
 .card_details {
@@ -485,8 +499,16 @@ form {
   padding: 15px 16px;
 }
 
+.contact_form input:hover,
+.contact_form textarea:hover,
+.contact_form input:focus,
+.contact_form textarea:focus {
+  background-color: #ebebff;
+  transform: scale(1.1, 1.1);
+}
+
 /* ******************* *
-   Animations 
+   Animations
  * ******************* */
 
 .card_details .descriptive_txt {
@@ -495,15 +517,15 @@ form {
   opacity: 0;
 }
 
-.menu .btn {
-  animation: change_bg 1000ms ease-out;
+.menu .xs-transparent_btn {
+  animation: blink 600ms ease-out;
 }
 
 .project_info_txt,
 .tag_btn,
 .descriptive_txt.upper,
 .social > * {
-  animation: flip_horizontal 600ms ease-in-out 300ms;
+  animation: spin_vertical_axis 600ms ease-in-out 300ms;
 }
 
 .descriptive_txt.animate {
@@ -521,79 +543,68 @@ form {
 }
 
 .main_title,
-.project_title {
+.project_details_wrapper .project_title {
   animation: from-up_bounce 300ms cubic-bezier(1, 0.25, 1, 0.41);
   animation-fill-mode: forwards;
   transform: translateY(-40px);
   opacity: 0;
 }
 
-.action_btn {
-  animation: from-down_bounce 300ms cubic-bezier(1, 0.25, 1, 0.41) 600ms;
-  animation-fill-mode: forwards;
-  transform: translateY(50px);
-  opacity: 0;
-}
-
-@keyframes opacity_0-to-100 {
+/* Used on Logo */
+@keyframes slide_reverse {
   0% {
-    opacity: 0;
+    transform: translateX(-100px);
   }
 
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes change_bg {
   50% {
-    color: #fff;
-    background-color: var(--primary_b);
-    border-radius: 30%;
+    transform: translateX(70px) rotateY(180deg);
+  }
+
+  55% {
+    transform: translateX(72px) rotateY(180deg);
+  }
+
+  65% {
+    transform: translateX(75px) rotateY(180deg);
   }
 
   100% {
-    color: var(--neutral_n);
-    background-color: transparent;
+    transform: translateX(0);
   }
 }
 
-@keyframes flip_horizontal {
+/* Used on Navigation layout */
+@keyframes flex_play {
+  0% {
+    margin-right: 32px;
+    gap: 32px;
+  }
+}
+
+/* Used on Navigation buttons */
+@keyframes blink {
+  50% {
+    border: 1px dotted var(--primary_n);
+    border-radius: 10px;
+  }
+
+  98% {
+    border: 1px dotted #7f8cff5d;
+    border-radius: 10px;
+  }
+
+  100% {
+    border: transparent;
+  }
+}
+
+@keyframes spin_vertical_axis {
   100% {
     transform: rotateY(360deg);
   }
 }
 
-@keyframes flip_vertical {
-  100% {
-    transform: rotateX(360deg);
-  }
-}
-
-@keyframes from-left {
-  0% {
-    transform: translateX(-400px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes from-up {
-  0% {
-    transform: translateY(-300px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+/* Used on Main Titles */
 @keyframes from-up_bounce {
   0% {
     transform: translateY(-50px);
@@ -616,20 +627,24 @@ form {
   }
 }
 
-@keyframes from-down_bounce {
+/* Used on Descriptive text in Headline and About sections */
+@keyframes from-left {
   0% {
-    transform: translateY(50px);
+    transform: translateX(-400px);
     opacity: 0;
   }
 
-  40% {
-    transform: translateY(30px);
-    opacity: 0.3;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
+}
 
-  80% {
-    transform: translateY(-30px);
-    opacity: 0.9;
+/* Used on descriptive text in Contact-me section */
+@keyframes from-up {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
   }
 
   100% {
@@ -638,50 +653,47 @@ form {
   }
 }
 
-@keyframes slide_reverse {
+/* Used on Projects (cards) descriptive text */
+@keyframes opacity_0-to-100 {
   0% {
-    transform: translateX(-100px);
-  }
-
-  50% {
-    transform: translateX(70px) rotateY(180deg);
-  }
-
-  55% {
-    transform: translateX(72px) rotateY(180deg);
-  }
-  65% {
-    transform: translateX(75px) rotateY(180deg);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-@keyframes fall {
-  15% {
-    transform: translateY(80px) rotate(60deg);
-  }
-
-  35% {
-    transform: translateY(30px) rotate(120deg);
-  }
-
-  50% {
-    transform: translateY(100px) rotate(180deg);
+/* Used on Action buttons */
+@keyframes disappearing_bg {
+  0% {
+    color: #fff;
+    background-color: var(--primary_b);
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   }
 
   70% {
-    transform: translateY(15px) rotate(240deg);
-  }
-
-  80% {
-    transform: translateY(120px) rotate(300deg);
+    color: var(--neutral_n);
+    background-color: #6070ff59;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   }
 
   100% {
-    transform: translateY(0) rotate(360deg);
+    color: #396dfa;
+    background-color: #fff;
+    box-shadow: none;
+  }
+}
+
+/* Used on project card images */
+@keyframes scale {
+  50% {
+    transform: scale(1.2, 1.2);
+    box-shadow:
+      0 15px 15px rgba(64, 83, 252, 0.6),
+      0 15px 15px rgba(235, 235, 255, 0.3),
+      inset 0 5px 5px rgba(64, 83, 252, 0.6),
+      inset 0 5px 5px rgba(235, 235, 255, 0.3);
   }
 }
 
@@ -712,6 +724,7 @@ form {
   .menu {
     display: flex;
     justify-content: flex-end;
+    gap: 8px;
   }
 
   nav .btn {
