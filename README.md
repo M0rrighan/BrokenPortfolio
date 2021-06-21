@@ -3,8 +3,14 @@
 # Portfolio
 
 > Microverse Assigment: Copy of a Portfolio design from Figma Template (Template 1)
+> Responsive design:
 
-![screenshot](./app_screenshot.png)
+- Mobile Version
+- Desktop Version
+
+## Live Demo
+
+[Live Demo Link](https://m0rrighan.github.io/Portfolio_template1/)
 
 ## Built With
 
