@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://m0rrighan.github.io/Portfolio_template1/)
+[Click here for Live Demo](https://m0rrighan.github.io/Portfolio_template1/)
 
 ## Built With
 
