@@ -4,7 +4,9 @@
 
 > Microverse Assigment: Copy of a Portfolio design from Figma Template (Template 1)
 
-![screenshot](./app_screenshot.png)
+## Live Demo
+
+[Live Demo Link](https://m0rrighan.github.io/Portfolio_template1/)
 
 ## Built With
 
