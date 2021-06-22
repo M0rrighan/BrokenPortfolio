@@ -283,7 +283,7 @@ main {
   border-bottom-left-radius: 85px;
 }
 
-.headline {  
+.headline {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -487,10 +487,6 @@ form {
   justify-content: space-between;
   align-items: stretch;
   gap: 20px;
-}
-
-.contact_form li {
-  /* margin: 9px 0; */
 }
 
 .contact_form input,
@@ -744,16 +740,14 @@ form {
   /* Media queries for Headline Section */
   main {
     height: auto;
-    top:72px;
+    top: 72px;
   }
 
   .headline {
     width: 64vw;
     max-width: 920px;
-    padding: 0;
     margin: auto auto;
     padding: 259px 0 245px 0;
-    /* margin: 259px auto 245px auto; */
   }
 
   .headline .main_title {
