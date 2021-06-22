@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  /* width: 100%; */
   font-family: "Poppins", sans-serif;
   color: var(--neutral_n);
   background-color: #e5e5e5;
@@ -276,20 +276,19 @@ nav {
 main {
   position: relative;
   top: 48px;
-  width: 100vw;
-  height: calc(100vh - 54px);
-  max-height: 674px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
   border-bottom-left-radius: 85px;
 }
 
-.headline {
-  height: 97%;
+.headline {  
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   gap: 12px;
-  margin: auto 0;
+  margin: 30% auto 31% auto;
   padding: 0 24px;
 }
 
@@ -311,6 +310,7 @@ main {
 }
 
 .work_card {
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -349,7 +349,7 @@ main {
 }
 
 .card_details {
-  max-width: 295px;
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -372,6 +372,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -380,6 +381,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -741,8 +743,8 @@ form {
 
   /* Media queries for Headline Section */
   main {
-    height: calc(100vh - 72px);
-    max-height: none;
+    height: auto;
+    top:72px;
   }
 
   .headline {
@@ -750,6 +752,8 @@ form {
     max-width: 920px;
     padding: 0;
     margin: auto auto;
+    padding: 259px 0 245px 0;
+    /* margin: 259px auto 245px auto; */
   }
 
   .headline .main_title {
