@@ -244,15 +244,42 @@ header {
   z-index: 1;
 }
 
+nav {
+  margin-right: 24px;
+}
+.nav {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 28px;
+  background-color: rgba(96, 112, 255, 0.9);
+  color: #fff;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 600;
+}
+
 .menu {
   animation: flex_play 600ms ease-out;
   display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-.btn_flex {
+.btn_flex_center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn_flex_end {
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
 }
 
 .logo_placeholder {
@@ -266,10 +293,6 @@ header {
 .logo.xs-transparent_btn {
   padding: 10px 12px;
   animation: slide_reverse 1000ms ease-out;
-}
-
-nav {
-  margin-right: 24px;
 }
 
 /* main / headline section layout */
@@ -340,8 +363,7 @@ main {
 
 .img:hover img {
   transform: scale(1.15, 1.15);
-  box-shadow:
-    0 15px 10px rgba(64, 83, 252, 0.6),
+  box-shadow: 0 15px 10px rgba(64, 83, 252, 0.6),
     0 15px 10px rgba(235, 235, 255, 0.25),
     inset 0 5px 3px rgba(64, 83, 252, 0.6),
     inset 0 5px 3px rgba(235, 235, 255, 0.25);
@@ -687,8 +709,7 @@ form {
 @keyframes scale {
   50% {
     transform: scale(1.2, 1.2);
-    box-shadow:
-      0 15px 15px rgba(64, 83, 252, 0.6),
+    box-shadow: 0 15px 15px rgba(64, 83, 252, 0.6),
       0 15px 15px rgba(235, 235, 255, 0.3),
       inset 0 5px 5px rgba(64, 83, 252, 0.6),
       inset 0 5px 5px rgba(235, 235, 255, 0.3);
@@ -719,8 +740,25 @@ form {
     display: none;
   }
 
+  nav {
+    margin-right: 24px;
+    height: auto;
+    width: auto;
+    position: unset;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
   .menu {
-    display: flex;
+    /* position: unset;
+    height: auto;
+    width: auto;
+    background-color: transparent; */
+    display: inline-flex;
+    flex-direction: row;
     justify-content: flex-end;
     gap: 8px;
   }
