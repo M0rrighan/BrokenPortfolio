@@ -150,6 +150,10 @@ textarea::placeholder {
   font-weight: 500;
 }
 
+.fw_600 {
+  font-weight: 700;
+}
+
 .fw_bold {
   font-weight: 700;
 }
@@ -251,11 +255,12 @@ nav {
 .nav {
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  padding: 28px;
+  padding: 22px 28px;
   background-color: rgba(96, 112, 255, 0.9);
+  mix-blend-mode: multiply;
   color: #fff;
   font-size: 32px;
   line-height: 44px;
@@ -268,7 +273,7 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 40px;
+  gap: 24px;
 }
 
 .btn_flex_center {
