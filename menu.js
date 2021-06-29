@@ -1,3 +1,4 @@
+const smallScreen = !window.matchMedia('only screen and (min-width: 992px)').matches;
 const body = document.getElementsByTagName('body')[0];
 const logo = document.querySelector('.logo_placeholder');
 const nav = document.querySelector('nav');
@@ -47,7 +48,9 @@ function toggleMenu() {
 menuBtn.addEventListener('click', toggleMenu);
 menuBtn.addEventListener('touchstart', toggleMenu);
 
-for (let i = 0; i < navLinks.length; i += 1) {
-  navLinks[i].addEventListener('click', hideMenu);
-  navLinks[i].addEventListener('touchstart', hideMenu);
+if (smallScreen) {
+  for (let i = 0; i < navLinks.length; i += 1) {
+    navLinks[i].addEventListener('click', hideMenu);
+    navLinks[i].addEventListener('touchstart', hideMenu);
+  }
 }
