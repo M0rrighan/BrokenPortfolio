@@ -2,14 +2,19 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KSJKQX910P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KSJKQX910P"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-KSJKQX910P');
-</script>
+      gtag("config", "G-KSJKQX910P");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +24,7 @@
       rel="stylesheet"
     />
     <title>Morrighan's Portfolio</title>
-  </head>  
+  </head>
 
   <body>
     <!-- start toolbar -->
@@ -30,27 +35,28 @@
         >
       </div>
       <nav>
-        <ul class="menu">
-          <li class="btn xs-transparent_btn btn_flex">
-            <a href="#Portfolio">Portfolio</a>
-          </li>
-          <li class="btn xs-transparent_btn btn_flex">
-            <a href="#About">About</a>
-          </li>
-          <li class="btn xs-transparent_btn btn_flex">
-            <a href="#Contact">Contact</a>
-          </li>
-        </ul>
-
-        <a href="#menu" class="btn xs-transparent_btn btn_flex menu_btn"
+        <a
+          href="#menu"
+          class="btn xs-transparent_btn btn_flex_center menu_btn"
           ><i class="material-icons primary_b">menu</i></a
         >
+        <ul class="menu">
+          <li class="btn xs-transparent_btn btn_flex_center">
+            <a href="#Portfolio" >Portfolio</a>
+          </li>
+          <li class="btn xs-transparent_btn btn_flex_center">
+            <a href="#About" >About</a>
+          </li>
+          <li class="btn xs-transparent_btn btn_flex_center">
+            <a href="#Contact" >Contact</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <!-- end toolbar -->
 
     <!-- start main -->
-    <main class="shapes_bg bg_white">
+    <main id="main" class="shapes_bg bg_white">
       <section class="headline">
         <hgroup>
           <h1 class="main_title neutral_b">I’m Radmila</h1>
@@ -65,16 +71,24 @@
         <p class="primary_n descriptive_txt fw_med upper">Let's connect</p>
         <ul class="social">
           <li>
-            <a href="#"><img src="icons/twitter.svg" alt="twitter logo icon" /></a>
+            <a href="#"
+              ><img src="icons/twitter.svg" alt="twitter logo icon"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="icons/linkedin.svg" alt="linkedin logo icon" /></a>
+            <a href="#"
+              ><img src="icons/linkedin.svg" alt="linkedin logo icon"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="icons/medium.svg" alt="medium logo icon" /></a>
+            <a href="#"
+              ><img src="icons/medium.svg" alt="medium logo icon"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="icons/github.svg" alt="github logo icon" /></a>
+            <a href="#"
+              ><img src="icons/github.svg" alt="github logo icon"
+            /></a>
           </li>
           <li>
             <a href="#"
@@ -270,7 +284,9 @@
 
           <ul class="social">
             <li>
-              <a href="#"><img src="icons/github.svg" alt="github logo icon" /></a>
+              <a href="#"
+                ><img src="icons/github.svg" alt="github logo icon"
+              /></a>
             </li>
             <li>
               <a href="#">
@@ -283,10 +299,14 @@
               </a>
             </li>
             <li>
-              <a href="#"><img src="icons/twitter.svg" alt="twitter logo icon" /></a>
+              <a href="#"
+                ><img src="icons/twitter.svg" alt="twitter logo icon"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="icons/medium.svg" alt="medium logo icon" /></a>
+              <a href="#"
+                ><img src="icons/medium.svg" alt="medium logo icon"
+              /></a>
             </li>
           </ul>
 
@@ -299,7 +319,9 @@
           <li>
             <ul class="skill_frame">
               <li class="skills_title">Languages</li>
-              <li class="btn xs-transparent_btn btn_flex expand_collapse">
+              <li
+                class="btn xs-transparent_btn btn_flex_center expand_collapse"
+              >
                 <i class="material-icons">expand_more</i>
               </li>
             </ul>
@@ -338,7 +360,9 @@
           <li>
             <ul class="skill_frame separator">
               <li class="skills_title">Frameworks</li>
-              <li class="btn xs-transparent_btn btn_flex expand_collapse">
+              <li
+                class="btn xs-transparent_btn btn_flex_center expand_collapse"
+              >
                 <i class="material-icons">chevron_right</i>
               </li>
             </ul>
@@ -347,7 +371,9 @@
           <li>
             <ul class="skill_frame separator">
               <li class="skills_title">Skills</li>
-              <li class="btn xs-transparent_btn btn_flex expand_collapse">
+              <li
+                class="btn xs-transparent_btn btn_flex_center expand_collapse"
+              >
                 <i class="material-icons">chevron_right</i>
               </li>
             </ul>
@@ -411,5 +437,6 @@
         </div>
       </section>
     </div>
+    <script type="text/javascript" src="menu.js"></script>
   </body>
 </html>
