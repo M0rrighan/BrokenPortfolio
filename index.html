@@ -97,116 +97,10 @@
           </li>
         </ul>
       </section>
-    </main>
-
-    <div class="all_modals">
-      <div class="modal" id="modal1">
-        <article class="work_card bg_white">
-            <div title="project_details" class="project_details_wrapper">
-              <h3 class="project_title neutral_b">Tonic</h3>
-              <button
-              type="button"
-              data-close-modal class="close-btn btn xs-transparent_btn btn_flex_center">
-                <i class="material-icons">close</i>
-              </button>
-              <ul class="project_details">
-                <li title="client" class="project_info_txt upper neutral_n">
-                  Canopy
-                </li>
-                <li><i class="material-icons small light_grey">circle</i></li>
-                <li title="role" class="project_info_txt dark_grey">
-                  Back End Dev
-                </li>
-                <li><i class="material-icons small light_grey">circle</i></li>
-                <li title="year" class="project_info_txt dark_grey">2015</li>
-              </ul>
-            </div>
-            <div class="img">
-              <img src="./img/snapshoot1.png" alt="project preview image" />
-            </div>
-            <div class="card_details">
-            <p
-              title="project_description"
-              class="descriptive_txt fs_15 neutral_n"
-            >
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essent
-            </p>
-  
-            <div class="modal_tags_action">
-              <ul class="tags">
-                <li class="btn tag_btn">html</li>
-                <li class="btn tag_btn">css</li>
-                <li class="btn tag_btn">javaScript</li>
-              </ul>
-    
-              <div class="action">
-                <a href="#" class="btn action_btn enabled">See Project</a>
-                <a href="#" class="btn action_btn enabled">See Project1</a>
-              </div>
-            </div>          
-          </div>
-        </article>
-      </div>
-
-      <div class="modal" id="modal2">
-        <article class="work_card bg_white">
-            <div title="project_details" class="project_details_wrapper">
-              <h3 class="project_title neutral_b">Tonic 2</h3>
-              <button
-              type="button"
-              data-close-modal class="close-btn btn xs-transparent_btn btn_flex_center">
-                <i class="material-icons">close</i>
-              </button>
-              <ul class="project_details">
-                <li title="client" class="project_info_txt upper neutral_n">
-                  Canopy
-                </li>
-                <li><i class="material-icons small light_grey">circle</i></li>
-                <li title="role" class="project_info_txt dark_grey">
-                  Back End Dev
-                </li>
-                <li><i class="material-icons small light_grey">circle</i></li>
-                <li title="year" class="project_info_txt dark_grey">2015</li>
-              </ul>
-            </div>
-            <div class="img">
-              <img src="./img/snapshoot1.png" alt="project preview image" />
-            </div>
-            <div class="card_details">
-            <p
-              title="project_description"
-              class="descriptive_txt fs_15 neutral_n"
-            >
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essent
-            </p>
-  
-            <div class="modal_tags_action">
-              <ul class="tags">
-                <li class="btn tag_btn">html</li>
-                <li class="btn tag_btn">css</li>
-                <li class="btn tag_btn">javaScript</li>
-              </ul>
-    
-              <div class="action">
-                <a href="#" class="btn action_btn enabled">See Project</a>
-                <a href="#" class="btn action_btn enabled">See Project1</a>
-              </div>
-            </div>          
-          </div>
-        </article>
-      </div>
-    </div>
+    </main>    
 
     <section id="Portfolio" class="works_section">      
-      <article class="work_card bg_white">
+      <!-- <article class="work_card bg_white">
         <div class="img">
           <img src="./img/snapshoot1.png" alt="project preview image" />
         </div>
@@ -242,7 +136,10 @@
           </ul>
 
           <div class="action">
-            <a data-modal-target = "#modal1" href="#modal1" class="btn action_btn enabled">See Project</a>
+            <a
+            data-modal-target = "#modal1"
+            href="#modal1"
+            class="btn action_btn enabled">See Project</a>
           </div>
         </div>
       </article>
@@ -283,7 +180,9 @@
           </ul>
 
           <div class="action">
-            <a data-modal-target = "#modal2" href="#modal2" class="btn action_btn enabled">See Project</a>
+            <a data-modal-target = "#modal2"
+            href="#modal2"
+            class="btn action_btn enabled">See Project</a>
           </div>
         </div>
       </article>
@@ -369,6 +268,112 @@
           </div>
         </div>
       </article>
+
+      <div id="all_modals">
+        <div class="modal" id="modal1">
+          <article class="work_card bg_white">
+              <div title="project_details" class="project_details_wrapper">
+                <h3 class="project_title neutral_b">Tonic</h3>
+                <button
+                type="button"
+                data-close-modal class="close-btn btn xs-transparent_btn btn_flex_center">
+                  <i class="material-icons">close</i>
+                </button>
+                <ul class="project_details">
+                  <li title="client" class="project_info_txt upper neutral_n">
+                    Canopy
+                  </li>
+                  <li><i class="material-icons small light_grey">circle</i></li>
+                  <li title="role" class="project_info_txt dark_grey">
+                    Back End Dev
+                  </li>
+                  <li><i class="material-icons small light_grey">circle</i></li>
+                  <li title="year" class="project_info_txt dark_grey">2015</li>
+                </ul>
+              </div>
+              <div class="img">
+                <img src="./img/snapshoot1.png" alt="project preview image" />
+              </div>
+              <div class="card_details">
+              <p
+                title="project_description"
+                class="descriptive_txt fs_15 neutral_n"
+              >
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type
+              specimen book. It has survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essent
+              </p>
+    
+              <div class="modal_tags_action">
+                <ul class="tags">
+                  <li class="btn tag_btn">html</li>
+                  <li class="btn tag_btn">css</li>
+                  <li class="btn tag_btn">javaScript</li>
+                </ul>
+      
+                <div class="action">
+                  <a href="#" class="btn action_btn enabled">See Project</a>
+                  <a href="#" class="btn action_btn enabled">See Project1</a>
+                </div>
+              </div>          
+            </div>
+          </article>
+        </div>
+  
+        <div class="modal" id="modal2">
+          <article class="work_card bg_white">
+              <div title="project_details" class="project_details_wrapper">
+                <h3 class="project_title neutral_b">Tonic 2</h3>
+                <button
+                type="button"
+                data-close-modal class="close-btn btn xs-transparent_btn btn_flex_center">
+                  <i class="material-icons">close</i>
+                </button>
+                <ul class="project_details">
+                  <li title="client" class="project_info_txt upper neutral_n">
+                    Canopy
+                  </li>
+                  <li><i class="material-icons small light_grey">circle</i></li>
+                  <li title="role" class="project_info_txt dark_grey">
+                    Back End Dev
+                  </li>
+                  <li><i class="material-icons small light_grey">circle</i></li>
+                  <li title="year" class="project_info_txt dark_grey">2015</li>
+                </ul>
+              </div>
+              <div class="img">
+                <img src="./img/snapshoot1.png" alt="project preview image" />
+              </div>
+              <div class="card_details">
+              <p
+                title="project_description"
+                class="descriptive_txt fs_15 neutral_n"
+              >
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type
+              specimen book. It has survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essent
+              </p>
+    
+              <div class="modal_tags_action">
+                <ul class="tags">
+                  <li class="btn tag_btn">html</li>
+                  <li class="btn tag_btn">css</li>
+                  <li class="btn tag_btn">javaScript</li>
+                </ul>
+      
+                <div class="action">
+                  <a href="#" class="btn action_btn enabled">See Project</a>
+                  <a href="#" class="btn action_btn enabled">See Project1</a>
+                </div>
+              </div>          
+            </div>
+          </article>
+        </div>
+      </div> -->
     </section>
 
     <div class="about_base bg_white">
@@ -544,7 +549,8 @@
       </section>
     </div>
     <div class="overlay"></div>
-    <script type="text/javascript" src="menu.js"></script>
-    <script type="text/javascript" src="modals.js"></script>
+    <script src="menu.js"></script>
+    <script src="toggleModals.js"></script>
+    <script src="insertions.js"></script>
   </body>
 </html>
