@@ -100,9 +100,47 @@ const projects = {
 const portfolio = document.getElementById('Portfolio');
 let ind = 0;
 
+function createCard(project) {
+  let htmlTxt = `<article class="work_card bg_white">
+                   <div class="img">
+                    <img src="./img/snapshoot1.png" alt="project preview image" />
+                   </div>
+
+                <div class="card_details">
+                  <div title="project_details" class="project_details_wrapper">
+                    <h3 class="project_title neutral_b">Tonic</h3>
+                    <ul class="project_details">
+                      <li title="client" class="project_info_txt upper neutral_n">Canopy</li>
+                      <li><i class="material-icons small light_grey">circle</i></li>
+                      <li title="role" class="project_info_txt dark_grey">Back End Dev</li>
+                      <li><i class="material-icons small light_grey">circle</i></li>
+                      <li title="year" class="project_info_txt dark_grey">2015</li>
+                    </ul>
+                  </div>
+
+                  <p title="project_description" class="descriptive_txt fs_15 neutral_n">
+                    A daily selection of privately personalized reads; no accounts or
+                    sign-ups required.
+                  </p>
+
+                  <ul class="tags">
+                    <li class="btn tag_btn">html</li>
+                    <li class="btn tag_btn">css</li>
+                    <li class="btn tag_btn">javaScript</li>
+                  </ul>
+
+                  <div class="action">
+                    <a data-modal-target = "#modal1" href="#modal1" class="btn action_btn enabled">See Project</a>
+                  </div>
+                </div>
+              </article>`;
+
+  return htmlTxt;
+}
+
 function createModal(project1) {
-  let htmlTxt = `<div id="all_modals">
-                  <div class="modal active" id="modal${ind + 1}"}>
+  let htmlTxt = `
+                  <div class="modal" id="modal${ind + 1}"}>
                    <article class="work_card bg_white">
                      <div title="project_details" class="project_details_wrapper">
                      <h3 class="project_title neutral_b">${project1.title}</h3>
@@ -129,10 +167,10 @@ function createModal(project1) {
               </p>
               <div class="modal_tags_action">
                 <ul class="tags">`
-                for(let i = 0; i < project1.technologies.length; i +=1) {
-                  htmlTxt += `<li class="btn tag_btn">${project1.technologies[i]}</li>`
-                }
-                htmlTxt += `</ul>
+  for (let i = 0; i < project1.technologies.length; i += 1) {
+    htmlTxt += `<li class="btn tag_btn">${project1.technologies[i]}</li>`
+  }
+  htmlTxt += `</ul>
       
                 <div class="action">
                   <a href="${project1.liveUrl}" class="btn action_btn enabled">See Live</a>
@@ -146,7 +184,14 @@ function createModal(project1) {
 }
 
 function insertHtml() {
-  portfolio.innerHTML = createModal(projects.project1);
+  let projecName = '';
+
+  for (let i = 0; i < Object.keys(projects).length; i += 1) {
+    // projecName = Object.keys(projects)[i];
+    // portfolio.innerHTML += createCard(projects.projecName);
+    // portfolio.innerHTML += createModal(projects.projecName);
+    portfolio.innerHTML = "this line";
+  }
 }
 
 portfolio.onload = insertHtml();
