@@ -126,11 +126,11 @@ function createCard(project, ind) {
                     <p title="project_description" class="descriptive_txt fs_15 neutral_n">
                       ${project.shortDescription}
                     </p>
-                    <ul class="tags">`
-                      for (let i = 0; i < project.technologies.length; i += 1) {
-                        htmlTxt += `<li class="btn tag_btn">${project.technologies[i]}</li>`
-                      }
-        htmlTxt += `</ul>      
+                    <ul class="tags">`;
+  for (let i = 0; i < project.technologies.length; i += 1) {
+    htmlTxt += `<li class="btn tag_btn">${project.technologies[i]}</li>`;
+  }
+  htmlTxt += `</ul>      
                     <div class="action">
                       <a data-modal-target = "#modal${ind + 1}" href="#modal${ind + 1}" class="btn action_btn enabled"
                       >See Project</a>                    
