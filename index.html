@@ -227,7 +227,10 @@
             to help with it
           </p>
 
-          <form action="https://formspree.io/f/mdoyzdon" method="POST">
+          <form
+          id="form"
+          action="https://formspree.io/f/mdoyzdon" 
+          method="POST">
             <ul class="contact_form">
               <li>
                 <label for="name"></label>
@@ -251,6 +254,7 @@
                   placeholder="your_email@mail.com"
                   required
                 />
+                <div class="alert_msg"></div>
               </li>
               <li>
                 <label for="message"></label>
@@ -275,8 +279,9 @@
       </section>
     </div>
     <div class="overlay"></div>
-    <script src="menu.js"></script>
-    <script src="insertions.js"></script>
-    <script src="toggleModals.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/insertions.js"></script>
+    <script src="js/insertions.js"></script>
+    <script src="js/formValidation.js"></script>
   </body>
 </html>
