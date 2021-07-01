@@ -108,6 +108,13 @@ body {
   font-weight: 400;
 }
 
+.modal .card_details .descriptive_txt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
 .project_info_txt {
   font-size: 13px;
   line-height: 16px;
@@ -168,6 +175,23 @@ textarea::placeholder {
   letter-spacing: 0.03em;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.btn_flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_spb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn_flex_end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .xs-transparent_btn {
@@ -276,17 +300,6 @@ nav {
   gap: 24px;
 }
 
-.btn_flex_center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn_flex_end {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .logo_placeholder {
   height: 100%;
   display: flex;
@@ -366,6 +379,10 @@ main {
   animation: scale 600ms ease-in-out;
 }
 
+.modal .img img {
+  animation: none;
+}
+
 .img:hover img {
   transform: scale(1.15, 1.15);
   box-shadow:
@@ -374,6 +391,12 @@ main {
     inset 0 5px 3px rgba(64, 83, 252, 0.6),
     inset 0 5px 3px rgba(235, 235, 255, 0.25);
   transition: all 400ms ease-in-out;
+}
+
+.modal .img:hover img {
+  transform: none;
+  box-shadow: none;
+  transition: none;
 }
 
 .card_details {
@@ -385,6 +408,7 @@ main {
 }
 
 .project_details_wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -417,6 +441,56 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+/* Modals & Overlay */
+.modal {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  border-radius: 16px;
+  z-index: 10;
+  background-color: #fff;
+  height: 95%;
+  overflow-y: auto;
+  transform: scale(0);
+  transition: 300ms ease-in-out;
+}
+
+.modal.active {
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+}
+
+.modal .work_card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.modal .action {
+  justify-content: flex-start;
+  gap: 12px;
+  padding-top: 25px;
+  margin-top: 18px;
+  border-top: 1px solid #ebecf0;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #0000008a;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* About section layout */
@@ -537,7 +611,7 @@ form {
    Animations
  * ******************* */
 
-.card_details .descriptive_txt {
+.work_card .card_details .descriptive_txt {
   animation: opacity_0-to-100 500ms ease-in 600ms;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -850,6 +924,53 @@ form {
 
   .descriptive_txt {
     font-size: 16px;
+  }
+
+  /* Modals & Overlay */
+  .modal {
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 90vh;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 300ms ease-in-out;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 300ms ease-in-out;
+  }
+
+  .modal .work_card {
+    flex-direction: column;
+  }
+
+  .modal .work_card .img {
+    width: 100%;
+  }
+
+  .modal .work_card .img img {
+    animation: none;
+  }
+
+  .modal .card_details {
+    width: 100%;
+    max-width: none;
+    flex-direction: row;
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .modal .card_details .descriptive_txt {
+    width: 69%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 0; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  .modal .card_details .modal_tags_action {
+    width: 30%;
   }
 
   /* Media queries for About Section */
