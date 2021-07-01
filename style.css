@@ -108,6 +108,13 @@ body {
   font-weight: 400;
 }
 
+.modal .card_details .descriptive_txt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
 .project_info_txt {
   font-size: 13px;
   line-height: 16px;
