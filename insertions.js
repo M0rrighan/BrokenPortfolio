@@ -145,9 +145,13 @@ function createModal(project, ind) {
   let htmlTxt = `<div class="modal" id="modal${ind + 1}"}>
                    <article class="work_card bg_white">
                      <div title="project_details" class="project_details_wrapper">
+                     <div class="flex_spb">
                      <h3 class="project_title neutral_b">${project.title}</h3>
-                     <button type="button" data-close-modal class="close-btn btn xs-transparent_btn btn_flex_center"><i class="material-icons">close</i>
+                     <button type="button" data-close-modal 
+                     class="btn xs-transparent_btn btn_flex_center">
+                     <i class="material-icons">close</i>
                     </button>
+                    </div>
                     <ul class="project_details">
                     <li title="client" class="project_info_txt upper neutral_n">
                     ${project.details.client}
@@ -174,8 +178,14 @@ function createModal(project, ind) {
   }
   htmlTxt += `</ul>      
                 <div class="action">
-                  <a href="${project.liveUrl}" class="btn action_btn enabled">See Live</a>
-                  <a href="${project.sourceUrl}" class="btn action_btn enabled">See Source</a>
+                  <a href="${project.liveUrl}" class="btn flex_spb action_btn enabled">
+                  See Live
+                  <img src="icons/live.svg" alt="live logo"/>
+                  </a>
+                  <a href="${project.sourceUrl}" class="btn flex_spb action_btn enabled">
+                  See Source
+                  <img src="icons/githubSource.svg" alt="github logo icon"/>
+                  </a>
                 </div>
               </div>          
             </div>

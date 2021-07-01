@@ -183,6 +183,12 @@ textarea::placeholder {
   align-items: center;
 }
 
+.flex_spb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn_flex_end {
   display: flex;
   justify-content: flex-end;
@@ -211,12 +217,6 @@ form ul li .action_btn {
   padding: 4px 12px;
   background-color: #ebebff;
   color: var(--primary_b);
-}
-
-.modal .close-btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
 }
 
 .enabled {
@@ -408,6 +408,7 @@ main {
 }
 
 .project_details_wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -448,11 +449,11 @@ main {
   top: 1rem;
   left: 1rem;
   right: 1rem;
-  border: 1px solid red;
+  border-radius: 16px;
   z-index: 10;
   background-color: #fff;
-  /* height: 95%;
-  overflow-y: scroll; */
+  height: 95%;
+  overflow-y: auto; 
   transform: scale(0);
   transition: 300ms ease-in-out;
 }
@@ -929,9 +930,8 @@ form {
 .modal {
   top: 50%;
   left: 50%;
-  width: 90vw;
-  height: 95vh;
-  overflow-y: scroll;
+  width: 80vw;
+  height: 90vh;
   transform: translate(-50%, -50%) scale(0);
   transition: 300ms ease-in-out;
 }
