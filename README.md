@@ -2,11 +2,11 @@
 
 # Portfolio
 
-> Microverse Assigment: Copy of a Portfolio design from Figma Template (Template 1)
-
-## Live Demo
-
-[Live Demo Link](https://m0rrighan.github.io/Portfolio_template1/)
+> Microverse Assigment: Bugs: hide-and-seek
+Learning objectives
+Locate a bug using manual QA methods.
+Understand the importance of thoughtful, intentional problem-solving.
+Identify how developer tools are used in debugging front-end code.
 
 ## Built With
 
